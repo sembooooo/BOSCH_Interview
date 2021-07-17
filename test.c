@@ -24,17 +24,17 @@ boolean MotorStatus;
 void Task_MotorActuation(void)
 {
     boolean v1low , v2low;
-    float v1, v2;
-    v1 = Motor_phase_1_Voltage();
-    v2 = Motor_phase_2_Voltage();
+    float x, y;
+    x = Motor_phase_1_Voltage();
+    y = Motor_phase_2_Voltage();
     
     /* voltage should not be lower than 3.2 */    
-    if(v1 < 3.2 )
+    if(x < 3.2 )
     {
         v1low = TRUE;
     }
     /* voltage should not be lower than 3.2 */
-    if(v2 < 3.2 )
+    if(x < 3.2 )
     {
         v2low = TRUE;
     }
